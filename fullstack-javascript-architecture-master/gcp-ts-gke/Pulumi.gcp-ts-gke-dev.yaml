@@ -1,0 +1,8 @@
+config:
+  gcp-ts-gke:masterVersion: ""
+  gcp-ts-gke:nodeCount: "4"
+  gcp-ts-gke:nodeMachineType: n1-standard-2
+  gcp-ts-gke:password:
+    secure: AAABABlzc4ZFQadASM/WDuTcvHtAIkViyG9BTx5hu111C0tHpIXc+7k=
+  gcp:project: cresh-test
+  gcp:zone: us-central1-a
