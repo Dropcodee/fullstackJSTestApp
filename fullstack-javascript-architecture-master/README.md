@@ -4,7 +4,7 @@
 Opinionated project architecture for Full-Stack JavaScript Applications.
 
 ## About
-Using JavaScript for full-stack has always been a challenge especially with architecting various pieces of the application, choosing technologies and managing devOps. This project provides a base for typical project consisting a Landing Website, Web and Mobile Applications, API service and easy deployment of these services. This project uses a microservice architecture where all individual project runs as a service (container).
+Using JavaScript for full-stack has always been a challenge especially with architecting various pieces of the application, choosing technologies and managing devOps. This project provides a base for typical project consisting a Landing Website and Web applications, API service and easy deployment of these services. This project uses a microservice architecture where all individual project runs as a service (container).
 
 A typical product (SaaS, etc.) usually consists of following services:
 - Landing page
@@ -20,11 +20,6 @@ A typical product (SaaS, etc.) usually consists of following services:
     - Your actual application for your customers to use
     - Desktop browser
     - Tablet and mobile browser via responsive design
-    
-- Mobile Application
-    - Your actual application for your customers to use
-    - Android (Mobile/Tablet)
-    - iOS (Mobile/Tablet)
 
 ## Core Structure
     fsja
@@ -47,10 +42,6 @@ A typical product (SaaS, etc.) usually consists of following services:
       │
       ├── frontend
       │   ├── app
-      │   │   ├── mobile
-      │   │   │   > React Native
-      │   │   │   > iOS (Apple App Store)
-      │   │   │   > Android (Google Play Store)
       │   │   │
       │   │   └── web
       │   │       > React
@@ -92,11 +83,6 @@ A typical product (SaaS, etc.) usually consists of following services:
     - React Router
     - Material UI
         
-- Mobile (iOS, Android)
-    - React Native
-    - Redux
-    - React Navigation
-
 ### Deployment
 - Technologies
     - Docker
@@ -107,8 +93,6 @@ A typical product (SaaS, etc.) usually consists of following services:
 - Prerequisites
     - Node (`v10.x`)
     - MongoDB (`v4.x`)
-    - Xcode (for iOS) (latest)
-    - Android Studio (for Android) (latest)
     - Follow [React Native Guide](https://facebook.github.io/react-native/docs/getting-started) to setup your local machine
 
 - Clone repository `git clone git@github.com:atulmy/fullstack-javascript-architecture.git fullstack`
@@ -188,33 +172,7 @@ A typical product (SaaS, etc.) usually consists of following services:
             - Change directory `cd /var/www/fullstack`
             - Pull latest code `git pull`
             - Rebuild containers: `docker-compose up --build -d`
-
-- **Mobile**
-    - Switch to `mobile` directory `cd frontend/app/mobile`
-    - Configuration
-        - Modify `src/setup/config/env.js` for
-            - `APP_ENV` (`development` | `production`)
-            - `LANDING_URL` (`http://<your local network IP>:3000`)
-            - `WEB_URL` (`http://<your local network IP>:5000`)
-            - `API_URL` (`http://<your local network IP>:8000`)
-            - Tip: use `ifconfig` on macOS or Linux to get your local IP address
-    - Setup
-        - Install dependencies: `npm install`
-    - Run
-        - iOS `react-native run-ios --simulator='iPhone 8'`
-        - Android `react-native run-android` (connect your Android phone via USB or use already created simulator with name `Mobile_-_5` by running `cd ~/Library/Android/sdk/tools && ./emulator -avd Mobile_-_5`)
-    - Publish
-        - Android
-            - Build: `cd android && ./gradlew assembleRelease && cd ..`. 
-            - Upload `frontend/app/mobile/android/app/build/outputs/apk/release/app-release.apk` to Play Store.
-        - iOS
-            - Build: Open `frontend/app/mobile/ios/example.xcodeproj` in Xcode -> Choose Generic iOS Device (top left) -> Product (top menu) -> Archive.
-            - Upload using Archiver (will open automatically once Archive is complete)
-    - Resources
-        - [From react-native init to app stores real quick](https://blog.elao.com/en/dev/from-react-native-init-to-app-stores-real-quick/)
-        - iOS App icon and splashscreen generator [appicon](https://www.appicon.build/)
-        - Icon generator [makeappicon](https://makeappicon.com/)
-        - Icons and splashscreen generator [imagegorilla](https://apetools.webprofusion.com/app/#/tools/imagegorilla)
+       
      
 ## Screenshots
 
@@ -242,27 +200,12 @@ View all screenshots [here](https://github.com/atulmy/atulmy.github.io/tree/mast
       </td>
       <td>
         <img alt="Web" src="https://raw.githubusercontent.com/atulmy/atulmy.github.io/master/images/fullstack-javascript-architecture/web/Screenshot%202018-11-26%20at%208.44.25%20PM.png" />
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">Mobile</td>
-    </tr>
-    <tr>
-      <td>
-        <img alt="Mobile" src="https://raw.githubusercontent.com/atulmy/atulmy.github.io/master/images/fullstack-javascript-architecture/mobile/Screenshot%202018-11-26%20at%208.47.31%20PM.png" />
-      </td>
-      <td>
-        <img alt="Mobile" src="https://raw.githubusercontent.com/atulmy/atulmy.github.io/master/images/fullstack-javascript-architecture/mobile/Screenshot%202018-11-26%20at%208.48.07%20PM.png" />
-      </td>
-    </tr>
-  </tbody>
-</table>
+   
 
 ## Authors
-- Atul Yadav - [GitHub](https://github.com/atulmy) · [Twitter](https://twitter.com/atulmy)
+- Samuel Arogbonlo - [GitHub](https://github.com/samuelarogbonlo) · [Twitter](https://twitter.com/samuelarogbonlo)
 
 ## Collaborators
-- Hossein Nedaee - [GitHub](https://github.com/hosseinnedaee)
 - [YOUR NAME HERE] - Feel free to contribute to the codebase by resolving any open issues, refactoring, adding new features, writing test cases or any other way to make the project better and helpful to the community. Feel free to fork and send pull requests.
 
 ## Resources and Inspirations
@@ -274,17 +217,9 @@ View all screenshots [here](https://github.com/atulmy/atulmy.github.io/tree/mast
 - Start learning by looking at sample codes on GitHub: [#LearnByExamples](https://github.com/topics/learn-by-examples)
 
 ## Hire me
-Looking for a developer to build your next idea or need a developer to work remotely? Get in touch: [atul.12788@gmail.com](mailto:atul.12788@gmail.com)
+Looking for a devops engineer to build your next infrastruture to work remotely? Get in touch: [sbayo971@gmail.com](mailto:sbayo971@gmail.com)
 
-## Donate
-If you liked this project, you can donate to support it ❤️
-
-[![Donate via PayPal](https://raw.githubusercontent.com/atulmy/atulmy.github.io/master/images/mix/paypal-me-smaller.png)](http://paypal.me/atulmy)
-
-Thank you for donating: 
-- [Oleg Serbin](https://github.com/oserbin)
 
 ## License
-Copyright (c) 2018 Atul Yadav http://github.com/atulmy
 
 The MIT License (http://www.opensource.org/licenses/mit-license.php)
